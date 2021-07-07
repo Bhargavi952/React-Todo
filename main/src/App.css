@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  /* background-color: #282c34; */
+  width: 30%;
+  margin: auto;
+  height: min-content
+
+
 }
 
 .App-logo {
