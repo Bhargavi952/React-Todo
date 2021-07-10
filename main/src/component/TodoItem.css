@@ -3,3 +3,13 @@ button{
     border: none;
     outline: none;
 }
+.itemCont{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    width: 550px;
+}
+.status{
+    margin-top: 17px;
+}
+

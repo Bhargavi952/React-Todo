@@ -1,27 +1,29 @@
 import React from "react";
-import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import Checkbox from "@material-ui/core/Checkbox";
 import DeleteIcon from "@material-ui/icons/Delete";
+import Button from '@material-ui/core/Button';
+import SentimentVerySatisfiedSharpIcon from '@material-ui/icons/SentimentVerySatisfiedSharp';
 import "./TodoItem.css";
 
 const TodoItem = ({ title, status, id, handleToggle, handleDelete }) => {
   return (
-    <div>
-      <h1>{title}</h1>
-      <h3>{status}</h3>
-      <button
+    <div className="itemCont">
+      <h3>Task : {title}</h3>
+      <Button
         onClick={() => {
           handleToggle(id);
         }}
       >
-        <CheckCircleIcon fontSize="small" />
-      </button>
-      <button
+        <Checkbox style={{ color: "black"  }} />
+      </Button>
+      <Button
         onClick={() => {
           handleDelete(id);
         }}
       >
-        <DeleteIcon fontSize="small" />
-      </button>
+        <DeleteIcon style={{fontSize:"27px"}}  fontSize="small" />
+      </Button>
+      <h3 className='status'>{status ? "Task is completed":null}</h3>
     </div>
   );
 };
