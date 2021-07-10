@@ -5,7 +5,7 @@ import TodoItem from './TodoItem'
 const Todo = () => {
     const [todo , setTodo] = useState([])
   const  todoData = (item)=>{
-      setTodo({...item,todo})
+      setTodo([...todo,item])
   } 
   console.log(todo)
   const handleDelete = (id) => {
@@ -21,13 +21,13 @@ const Todo = () => {
     return (
         <div>
             <TodoInput inputData={todoData}/>
-           {
+           { todo &&
                todo.map((item)=>{
-               return( <TodoItem {...item} handleToggle={handleToggle} handleDelete={handleDelete} key={item.id}/>
+               return( <TodoItem key={item.id} {...item} handleToggle={handleToggle} handleDelete={handleDelete}  />
                )
                })
            }
-           <TodoItem/>
+           {/* <TodoItem/> */}
         </div>
     )
 }

@@ -1,11 +1,15 @@
 import React, { useState } from "react";
+import { v4 as uuid } from "uuid";
+
 
 const TodoInput = ({inputData}) => {
   const [text, setText] = useState("");
   const handleAdd = () => {
     const payload = {
         title:text,
-        status: false
+        status: false,
+        id: uuid(),
+
     };
     inputData(payload)
     setText("")

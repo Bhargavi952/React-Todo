@@ -1,9 +1,9 @@
 import React from "react";
-import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import DeleteIcon from "@material-ui/icons/Delete";
-import './TodoItem.css'
+import "./TodoItem.css";
 
-const TodoItem = ({ title, status, id, handleToggle,handleDelete }) => {
+const TodoItem = ({ title, status, id, handleToggle, handleDelete }) => {
   return (
     <div>
       <h1>{title}</h1>
@@ -15,10 +15,12 @@ const TodoItem = ({ title, status, id, handleToggle,handleDelete }) => {
       >
         <CheckCircleIcon fontSize="small" />
       </button>
-      <button   onClick={() => {
+      <button
+        onClick={() => {
           handleDelete(id);
-        }}>
-        <DeleteIcon fontSize="small"  />
+        }}
+      >
+        <DeleteIcon fontSize="small" />
       </button>
     </div>
   );
